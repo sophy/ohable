@@ -1,30 +1,49 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
-_s
+ "Ohable" - The Ultimate Class Theme for WordPress
 ===
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Elevate your online presence with "Ohable," a meticulously crafted WordPress theme designed to encapsulate elegance, functionality, and user-centricity. With a primary focus on optimizing both SEO performance and user engagement, Ohable is more than just a theme – it's an experience.
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+🌟 Elegance Meets Functionality:
+====
+Ohable seamlessly blends a sophisticated design with user-friendly functionality. Its clean and modern aesthetic ensures that your content takes center stage, while the intuitive navigation empowers visitors to explore your website effortlessly.
 
-* A modern workflow with a pre-made command-line interface to turn your project into a more pleasant experience.
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A custom header implementation in `inc/custom-header.php`. Just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample layouts in `sass/layouts/` made using CSS Grid for a sidebar on either side of your content. Just uncomment the layout of your choice in `sass/style.scss`.
-Note: `.no-sidebar` styles are automatically loaded.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
+🚀 SEO Optimization at its Core:
+====
+Harness the power of SEO with Ohable's built-in optimization features. From clean code to schema markup, every aspect of the theme is fine-tuned to enhance your website's visibility on search engines. Say goodbye to hidden hurdles – Ohable puts you on the map.
+
+👁️ User-Centric Interface:
+====
+User experience reigns supreme, and Ohable excels in this domain. The theme's responsive design ensures a flawless presentation on all devices, while carefully curated typography and spacing enhance readability. Your audience will engage with your content like never before.
+
+🔗 Clickable and Interactive:
+Ohable places a premium on user interaction. From intuitive call-to-action buttons to strategically placed links, every element is designed to encourage clicks and engagement. Maximize user interaction and conversions effortlessly.
+
+🎨 Customization Made Easy:
+====
+Personalize Ohable to match your brand's identity. The user-friendly customization options allow you to tweak colors, fonts, layouts, and more without any coding knowledge. Your website will truly be an extension of your unique style.
+
+📈 Optimized for Performance:
+====
+Speed matters, and Ohable understands that. With optimized code and performance-driven features, your website will load swiftly, ensuring that visitors stay engaged and explore more of what you offer.
+
+📢 Amplify Your Message:
+====
+Whether you're a blogger, creative professional, or business owner, Ohable provides the perfect canvas to amplify your message. Share your thoughts, showcase your portfolio, or promote your products with confidence.
+
+In a world of infinite choices, Ohable stands out as a theme that marries class, SEO prowess, and user-friendliness seamlessly. Elevate your online presence, captivate your audience, and achieve your digital goals with Ohable. Discover a new era of WordPress themes today.
+
+Experience "Ohable" – Where Elegance Meets Performance.
+
+Download Now and Elevate Your Website!
 
 Installation
 ---------------
 
 ### Requirements
 
-`_s` requires the following dependencies:
+`Ohable` requires the following dependencies:
 
 - [Node.js](https://nodejs.org/)
 - [Composer](https://getcomposer.org/)
@@ -44,7 +63,7 @@ Then, update the stylesheet header in `style.css`, the links in `footer.php` wit
 
 ### Setup
 
-To start using all the tools that come with `_s`  you need to install the necessary Node.js and Composer dependencies :
+To start using all the tools that come with `Ohable`  you need to install the necessary Node.js and Composer dependencies :
 
 ```sh
 $ composer install
@@ -53,7 +72,7 @@ $ npm install
 
 ### Available CLI commands
 
-`_s` comes packed with CLI commands tailored for WordPress theme development :
+`Ohable` comes packed with CLI commands tailored for WordPress theme development :
 
 - `composer lint:wpcs` : checks all PHP files against [PHP Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/).
 - `composer lint:php` : checks all PHP files for syntax errors.
