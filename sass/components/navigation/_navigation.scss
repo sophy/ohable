@@ -47,6 +47,21 @@
 		li.focus > ul {
 			left: auto;
 		}
+		li > a {
+			&::after {
+				content: '';
+				display: block;
+				width: 0;
+				height: 2px;
+				background: #191970;
+				transition: width .3s;
+			}
+			&:hover {
+				&::after {
+					width: 100%;
+				}
+			}
+		}
 	}
 
 	li {
@@ -54,6 +69,7 @@
 
 		&:hover > a,
 		&.focus > a {
+
 		}
 	}
 
@@ -66,6 +82,33 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		color: #191970;
+		&::after {
+			width: 100%;
+		}
+	}
+
+	@include lg {
+		width: auto;
+		
+		ul {
+			display: flex;
+
+			li {
+				margin-right: 10px;
+
+				a {
+					font-weight: bold;
+				}
+			}
+
+			ul {
+				display: block;
+				background: #fff;
+
+				padding: 10px;
+			}
+		}
 	}
 }
 
@@ -75,14 +118,9 @@
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
-
-	.menu-toggle {
+.menu-toggle {
+	@include lg {
 		display: none;
-	}
-
-	.main-navigation ul {
-		display: flex;
 	}
 }
 

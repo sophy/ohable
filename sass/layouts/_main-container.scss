@@ -1,0 +1,8 @@
+.main-container {
+    width: 100%;
+    margin: auto;
+    @include lg {
+        width: 960px;
+    }
+}
+@import "no-sidebar";

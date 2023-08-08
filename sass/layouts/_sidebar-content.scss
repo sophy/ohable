@@ -9,6 +9,7 @@
 
 .site-header {
 	grid-area: header;
+	margin-bottom: 20px;
 }
 
 .site-main {
@@ -24,4 +25,4 @@
 	grid-area: footer;
 }
 
-@import "no-sidebar";
+// @import "no-sidebar";

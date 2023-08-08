@@ -9,3 +9,31 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+// Breakpoint
+@mixin sm {
+	@media (min-width: $smBreakpoint){
+		@content
+	}
+}
+@mixin md {
+	@media (min-width: $mdBreakpoint){
+		@content
+	}
+}
+@mixin lg {
+	@media (min-width: $lgBreakpoint){
+		@content
+	}
+}
+
+@mixin xl {
+	@media (min-width: $xlBreakpoint){
+		@content
+	}
+}
+@mixin xxl {
+	@media (min-width: $xxlBreakpoint){
+		@content
+	}
+}
