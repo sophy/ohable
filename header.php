@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="main-site" class="main-container">
+<div id="main-site" class="main-container <?php echo $class = is_page_template('page-templates/homepage.php') ? 'no-sidebar' : '' ?>">
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'ohable'); ?></a>
 
@@ -51,9 +51,9 @@ if ($ohable_description || is_customize_preview()) :
 			<?php
             wp_nav_menu(
                 array(
-                                                                                'theme_location' => 'menu-1',
-                                                                                'menu_id'        => 'primary-menu',
-                                                                                )
+                                                                                                                                        'theme_location' => 'menu-1',
+                                                                                                                                        'menu_id'        => 'primary-menu',
+                                                                                                                                        )
             );
 ?>
 		</nav><!-- #site-navigation -->

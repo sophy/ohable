@@ -13,6 +13,9 @@ if (! function_exists('ohable_posted_on')) :
      */
     function ohable_posted_on()
     {
+        // TODO: Temporary hide post date
+        return false;
+
         $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
         if (get_the_time('U') !== get_the_modified_time('U')) {
             $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -43,6 +46,9 @@ if (! function_exists('ohable_posted_by')) :
      */
     function ohable_posted_by()
     {
+        // TODO: Temporary hide author
+        return false;
+
         $byline = sprintf(
             /* translators: %s: post author. */
             esc_html_x('by %s', 'post author', 'ohable'),
@@ -60,6 +66,7 @@ if (! function_exists('ohable_entry_footer')) :
      */
     function ohable_entry_footer()
     {
+
         // Hide category and tag text for pages.
         if ('post' === get_post_type()) {
             /* translators: used between list items, there is a space after the comma */
@@ -142,12 +149,12 @@ if (! function_exists('ohable_post_thumbnail')) :
                     the_post_thumbnail(
                         'post-thumbnail',
                         array(
-                                                    'alt' => the_title_attribute(
-                                                        array(
-                                                            'echo' => false,
-                                                        )
-                                                    ),
-                                                )
+                                                                            'alt' => the_title_attribute(
+                                                                                array(
+                                                                                    'echo' => false,
+                                                                                )
+                                                                            ),
+                                                                        )
                     );
 		    ?>
 			</a>

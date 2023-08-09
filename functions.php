@@ -47,6 +47,8 @@ function ohable_setup()
         */
     add_theme_support('post-thumbnails');
 
+    add_image_size('homepage-thumb', 9999, 256);
+
     // This theme uses wp_nav_menu() in one location.
     register_nav_menus(
         array(
@@ -153,6 +155,10 @@ function ohable_scripts()
 }
 add_action('wp_enqueue_scripts', 'ohable_scripts');
 
+/**
+ * Class Loader
+ */
+require get_template_directory() . '/inc/loader.php';
 /**
  * Implement the Custom Header feature.
  */

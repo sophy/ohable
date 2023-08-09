@@ -4,7 +4,12 @@
 
 .post,
 .page {
-	margin: 0 0 1.5em;
+	margin: 0 0 2.5em;
+
+	.post-thumbnail {
+		display: block;
+		text-align: center;
+	}
 }
 
 .updated:not(.published) {
@@ -20,4 +25,13 @@
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.entry-footer {
+	.cat-links,
+	.comments-link,
+	.edit-link {
+		display: inline-block;
+		margin-right: 10px;
+	}
 }

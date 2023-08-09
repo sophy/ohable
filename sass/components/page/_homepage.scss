@@ -1,0 +1,64 @@
+.hp-latest-title {
+    font-size: $text_xl;
+    font-weight: bold;
+    margin: 0 0 1rem;
+}
+.hp-latest-post-wrap {
+    display: grid;
+
+    .hp-post-title {
+        font-size: $text_base;
+        font-weight: normal;
+        margin: 0 0 1.2rem;
+    }
+
+    @include lg {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.hp-cats-posts {
+    display: grid;
+    gap: 20px;
+
+    @include lg {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .first-post {
+        margin: 0 0 20px;
+        font-size: $text_md;
+
+        a {
+            color: $color__text-main;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .cat-title {
+        font-size: $text_xl;
+
+        a {
+            color: $color__text-main;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .hp-f-post-thumb {
+        
+    }
+
+    .hp-post-title {
+        font-size: $text_base;
+        font-weight: normal;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+}

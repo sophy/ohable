@@ -1,35 +1,28 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
-
  "Ohable" - The Ultimate Class Theme for WordPress
 ===
 
 Elevate your online presence with "Ohable," a meticulously crafted WordPress theme designed to encapsulate elegance, functionality, and user-centricity. With a primary focus on optimizing both SEO performance and user engagement, Ohable is more than just a theme – it's an experience.
 
-🌟 Elegance Meets Functionality:
-====
+### 🌟 Elegance Meets Functionality:
 Ohable seamlessly blends a sophisticated design with user-friendly functionality. Its clean and modern aesthetic ensures that your content takes center stage, while the intuitive navigation empowers visitors to explore your website effortlessly.
 
-🚀 SEO Optimization at its Core:
-====
+### 🚀 SEO Optimization at its Core:
 Harness the power of SEO with Ohable's built-in optimization features. From clean code to schema markup, every aspect of the theme is fine-tuned to enhance your website's visibility on search engines. Say goodbye to hidden hurdles – Ohable puts you on the map.
 
-👁️ User-Centric Interface:
-====
+### 👁️ User-Centric Interface:
+
 User experience reigns supreme, and Ohable excels in this domain. The theme's responsive design ensures a flawless presentation on all devices, while carefully curated typography and spacing enhance readability. Your audience will engage with your content like never before.
 
 🔗 Clickable and Interactive:
 Ohable places a premium on user interaction. From intuitive call-to-action buttons to strategically placed links, every element is designed to encourage clicks and engagement. Maximize user interaction and conversions effortlessly.
 
-🎨 Customization Made Easy:
-====
+### 🎨 Customization Made Easy:
 Personalize Ohable to match your brand's identity. The user-friendly customization options allow you to tweak colors, fonts, layouts, and more without any coding knowledge. Your website will truly be an extension of your unique style.
 
-📈 Optimized for Performance:
-====
+### 📈 Optimized for Performance:
 Speed matters, and Ohable understands that. With optimized code and performance-driven features, your website will load swiftly, ensuring that visitors stay engaged and explore more of what you offer.
 
-📢 Amplify Your Message:
-====
+### 📢 Amplify Your Message:
 Whether you're a blogger, creative professional, or business owner, Ohable provides the perfect canvas to amplify your message. Share your thoughts, showcase your portfolio, or promote your products with confidence.
 
 In a world of infinite choices, Ohable stands out as a theme that marries class, SEO prowess, and user-friendliness seamlessly. Elevate your online presence, captivate your audience, and achieve your digital goals with Ohable. Discover a new era of WordPress themes today.

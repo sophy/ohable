@@ -22,7 +22,7 @@ if ('post' === get_post_type()) :
     ?>
 			<div class="entry-meta">
 				<?php
-        ohable_posted_on();
+                    ohable_posted_on();
     ohable_posted_by();
     ?>
 			</div><!-- .entry-meta -->
@@ -32,28 +32,33 @@ if ('post' === get_post_type()) :
 	<?php ohable_post_thumbnail(); ?>
 
 	<div class="entry-content">
+        
 		<?php
-        the_content(
-            sprintf(
-                wp_kses(
-                    /* translators: %s: Name of current post. Only visible to screen readers */
-                    __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'ohable'),
-                    array(
-                        'span' => array(
-                            'class' => array(),
-                        ),
-                    )
-                ),
-                wp_kses_post(get_the_title())
-            )
-        );
+        if (is_archive()):
+            the_excerpt();
+        else:
+            the_content(
+                sprintf(
+                    wp_kses(
+                        /* translators: %s: Name of current post. Only visible to screen readers */
+                        __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'ohable'),
+                        array(
+                            'span' => array(
+                                'class' => array(),
+                            ),
+                        )
+                    ),
+                    wp_kses_post(get_the_title())
+                )
+            );
 
-wp_link_pages(
-    array(
-        'before' => '<div class="page-links">' . esc_html__('Pages:', 'ohable'),
-        'after'  => '</div>',
-    )
-);
+            wp_link_pages(
+                array(
+                    'before' => '<div class="page-links">' . esc_html__('Pages:', 'ohable'),
+                    'after'  => '</div>',
+                )
+            );
+        endif;
 ?>
 	</div><!-- .entry-content -->
 
