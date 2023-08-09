@@ -22,46 +22,54 @@ class Ohable_Homepage_Display
      *
      * @var integer
      */
-    protected $postPerCategory = 5;
+    protected $post_per_cat = 5;
 
     /**
      * Limit latest posts
      *
      * @var integer
      */
-    protected $limit_latest_post = 20;
+    protected $limit_latest_posts = 20;
 
     public function __construct()
     {
         $this->categories = $this->loadCategories();
+        $this->post_per_cat = get_theme_mod('limit_post_per_cat', $this->post_per_cat);
+        $this->limit_latest_posts = get_theme_mod('limit_latest_posts', $this->limit_latest_posts);
     }
 
     public function the_latest_posts()
     {
         global $post;
 
+        if (! get_theme_mod('show_latest')) {
+            return false;
+        }
+
         ?>
             
 	<?php
         $recent_posts = wp_get_recent_posts([
-            'numberposts' => $this->limit_latest_post, // Number of recent posts thumbnails to display
+            'numberposts' => $this->limit_latest_posts, // Number of recent posts thumbnails to display
             'post_status' => 'publish', // Show only the published posts
         ], OBJECT);
 
         ?>
-        <h3 class="hp-latest-title"><?php _e('Latest', 'ohable') ?></h3>
-        <div class="hp-latest-post-wrap">
-        <?php
-        foreach($recent_posts as $post) :
-            setup_postdata($post);
-            ?>
-            <h2 class="hp-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-	        <?php
+        <div class="hp-latest-posts">
+            <h3 class="hp-latest-title"><?php _e('Latest', 'ohable') ?></h3>
+            <div class="hp-latest-post-wrap">
+            <?php
+            foreach($recent_posts as $post) :
+                setup_postdata($post);
+                ?>
+                <h2 class="hp-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <?php
 
-        endforeach;
+            endforeach;
 
         wp_reset_postdata();
         ?>
+            </div>
         </div>
         <?php
     }
@@ -129,7 +137,7 @@ class Ohable_Homepage_Display
         foreach($this->categories as $cat_id) {
             $data[$cat_id]['cat'] = get_category($cat_id);
             $data[$cat_id]['posts'] = get_posts([
-                'numberposts' => $this->postPerCategory,
+                'numberposts' => $this->post_per_cat,
                 'category' => $cat_id,
                 'post_status' => 'publish'
             ]);
@@ -159,6 +167,19 @@ class Ohable_Homepage_Display
      */
     protected function loadCategories(): array
     {
-        return [25,24,21,7];
+        // return [25,24,21,7];
+
+        $cats = [];
+        for($i = 1; $i <= 6; $i++) {
+            $setting_key = 'hp_cat_'. $i;
+            $cat_id = get_theme_mod($setting_key);
+
+            if ($cat_id) {
+                $cats[] = $cat_id;
+            }
+
+        }
+
+        return $cats;
     }
 }

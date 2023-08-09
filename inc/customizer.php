@@ -12,6 +12,9 @@
  */
 function ohable_customize_register($wp_customize)
 {
+    // Custom Control
+    ohable_load_customizers();
+
     $wp_customize->get_setting('blogname')->transport         = 'postMessage';
     $wp_customize->get_setting('blogdescription')->transport  = 'postMessage';
     $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
@@ -31,6 +34,99 @@ function ohable_customize_register($wp_customize)
                 'render_callback' => 'ohable_customize_partial_blogdescription',
             )
         );
+
+        // Dropdown menu on homepage
+        // $wp_customize->add_section('homepage', array(
+        //     'title' => esc_html_x('Homepage Options', 'customizer section title', 'ohable'),
+        // ));
+        $wp_customize->add_setting('show_latest', array(
+            'default'           => 1,
+            'sanitize_callback' => 'absint',
+        ));
+        $wp_customize->add_setting('limit_latest_posts', array(
+            'default'           => 20,
+            'sanitize_callback' => 'absint',
+        ));
+
+        $wp_customize->add_setting('hp_cat_1', array(
+            'default'           => 0,
+            'sanitize_callback' => 'absint',
+        ));
+        $wp_customize->add_setting('hp_cat_2', array(
+            'default'           => 0,
+            'sanitize_callback' => 'absint',
+        ));
+        $wp_customize->add_setting('hp_cat_3', array(
+            'default'           => 0,
+            'sanitize_callback' => 'absint',
+        ));
+        $wp_customize->add_setting('hp_cat_4', array(
+            'default'           => 0,
+            'sanitize_callback' => 'absint',
+        ));
+        $wp_customize->add_setting('hp_cat_5', array(
+            'default'           => 0,
+            'sanitize_callback' => 'absint',
+        ));
+        $wp_customize->add_setting('hp_cat_6', array(
+            'default'           => 0,
+            'sanitize_callback' => 'absint',
+        ));
+
+        $wp_customize->add_setting('limit_post_per_cat', array(
+            'default'           => 5,
+            'sanitize_callback' => 'absint',
+        ));
+
+        // Latest Posts
+        $wp_customize->add_control('limit_latest_posts', array(
+            'type'          => 'number',
+            'section'       => 'static_front_page',
+            'label'         => esc_html__('Number of latest posts.', 'ohable'),
+        ));
+        $wp_customize->add_control('show_latest', array(
+            'section'       => 'static_front_page',
+            'type'          => 'checkbox',
+            'label'         => esc_html__('Show latest posts', 'ohable'),
+        ));
+
+        // Categories
+        $wp_customize->add_control(new Ohable_Dropdown_Category_Control($wp_customize, 'hp_cat_1', array(
+            'section'       => 'static_front_page',
+            'label'         => esc_html__('First Category on Homepage', 'ohable'),
+            'description'   => esc_html__('Select the category that the homepage will show posts from.', 'ohable'),
+        )));
+        $wp_customize->add_control(new Ohable_Dropdown_Category_Control($wp_customize, 'hp_cat_2', array(
+            'section'       => 'static_front_page',
+            'label'         => esc_html__('Second Category on Homepage', 'ohable'),
+
+        )));
+        $wp_customize->add_control(new Ohable_Dropdown_Category_Control($wp_customize, 'hp_cat_3', array(
+            'section'       => 'static_front_page',
+            'label'         => esc_html__('Third Category on Homepage', 'ohable'),
+
+        )));
+        $wp_customize->add_control(new Ohable_Dropdown_Category_Control($wp_customize, 'hp_cat_4', array(
+            'section'       => 'static_front_page',
+            'label'         => esc_html__('Fourth Category on Homepage', 'ohable'),
+        )));
+
+        $wp_customize->add_control(new Ohable_Dropdown_Category_Control($wp_customize, 'hp_cat_5', array(
+            'section'       => 'static_front_page',
+            'label'         => esc_html__('Fifth Category on Homepage', 'ohable'),
+        )));
+
+        $wp_customize->add_control(new Ohable_Dropdown_Category_Control($wp_customize, 'hp_cat_6', array(
+            'section'       => 'static_front_page',
+            'label'         => esc_html__('Sixth Category on Homepage', 'ohable'),
+        )));
+
+        // Limit post per category
+        $wp_customize->add_control('limit_post_per_cat', array(
+            'type'          => 'number',
+            'section'       => 'static_front_page',
+            'label'         => esc_html__('Limit Post Per Category', 'ohable'),
+        ));
     }
 }
 add_action('customize_register', 'ohable_customize_register');
