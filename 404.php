@@ -7,6 +7,9 @@
  * @package Ohable
  */
 
+// Check match condition for only clean spam.
+ohable_redirect_gone();
+
 get_header();
 ?>
 
@@ -32,12 +35,12 @@ the_widget('WP_Widget_Recent_Posts');
 							<?php
         wp_list_categories(
             array(
-                                        'orderby'    => 'count',
-                                        'order'      => 'DESC',
-                                        'show_count' => 1,
-                                        'title_li'   => '',
-                                        'number'     => 10,
-                                    )
+                                                                                        'orderby'    => 'count',
+                                                                                        'order'      => 'DESC',
+                                                                                        'show_count' => 1,
+                                                                                        'title_li'   => '',
+                                                                                        'number'     => 10,
+                                                                                    )
         );
 ?>
 						</ul>
